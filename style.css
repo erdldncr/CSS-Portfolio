@@ -43,7 +43,20 @@ a{
     width: fit-content;
     font-size: 4rem;
     position: relative;
-    color: #ffffff;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+#hero h1 span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+    
 }
 #hero .cta{
     display: inline-block;
@@ -55,6 +68,7 @@ a{
     text-transform: uppercase;
     letter-spacing: .1rem;
     margin-top: 30px;
+    /* background ve colorin degisim hizi; */
     transition: .3s ease;
     transition-property:background-color,color; 
 }
@@ -63,3 +77,21 @@ a{
     background-color: crimson;
 }
 /* end of hero section */
+
+/* keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: #ffffff;
+    }
+}
+/* keyframes */
