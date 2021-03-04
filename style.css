@@ -38,5 +38,28 @@ a{
     opacity: .7;
     z-index: -1;
 }
-
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: #ffffff;
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ffffff; 
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property:background-color,color; 
+}
+#hero .cta:hover{
+    color: #ffffff;
+    background-color: crimson;
+}
 /* end of hero section */
